@@ -1,17 +1,36 @@
-import React from 'react'
-const page =  async() => {
- // this is how to use fetch in server component , here it did not need useEffect to fetch data
-  /* const result = await fetch("https://jsonplaceholder.typicode.com/todos/1") ;
-  const todo =  await result.json() ; */
+import React from 'react';
+
+const AboutPage = () => {
+  const pageStyles = {
+    textAlign: 'center',
+    padding: '50px',
+    backgroundColor: 'black',
+  };
+
+  const headingStyles = {
+    fontSize: '24px',
+    fontWeight: 'bold',
+    marginBottom: '20px',
+  };
+
+  const paragraphStyles = {
+    fontSize: '16px',
+    lineHeight: '1.5',
+  };
+
   return (
-    <div className='about-container'>
-    <h1>
-   welcome to about page
-       </h1>
-      {/*  <h2>{todo.title}</h2> */}
-
+    <div style={pageStyles}>
+      <h1 style={headingStyles}>About Us</h1>
+      <p style={paragraphStyles}>
+        Welcome to our About page! We are a dedicated team of developers and designers
+        passionate about creating amazing web experiences.
+      </p>
+      <p style={paragraphStyles}>
+        Our mission is to build user-friendly and innovative web applications that solve
+        real-world problems and exceed our clients' expectations.
+      </p>
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default AboutPage;
